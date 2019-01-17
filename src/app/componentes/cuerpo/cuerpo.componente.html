@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col">
+        <h1>Prueba IF</h1>
+        <hr>
+        <div class="card text-white bg-primary mb-3" style="width: 100%;" *ngIf="mostrar">
+            <div class="card-header">{{mensaje.autor}}</div>
+            <div class="card-body">
+                <p class="card-text">{{mensaje.texto}}</p>
+            </div>
+        </div>
+        <button class="btn btn-block btn-primary" (click)="mostrar = !mostrar">Cambiar</button>
+    </div>
+    <div class="col">
+        <h1>Prueba FOR</h1>
+        <hr>
+        <ul class="list-group">
+            <li *ngFor="let persona of personas; let indice = index" class="list-group-item">{{indice + 1}} - {{persona}}</li>
+        </ul>
+    </div>
+</div>
